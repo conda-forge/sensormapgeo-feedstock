@@ -1,5 +1,5 @@
 {% set name = "sensormapgeo" %}
-{% set version = "0.4.8" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sensormapgeo-{{ version }}.tar.gz
-  sha256: ddfd8f5a09bc7e7fc3d7b2a3c07f610cccfd1d82c14d9dc5172749db835c95f6
+  sha256: 0644253e3906a12ad0c926ee1ecec79fc925e3e502e9268f91293baa4deff0f8
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - numpy
     - _openmp_mutex =* =*_llvm  # [linux]
     - pebble
-    - py-tools-ds >=0.14.26
+    - py-tools-ds >=0.18.0
     - pyproj >=2.2
     - pyresample >=1.11.0,<1.17.0
     - python
@@ -40,9 +40,9 @@ test:
     - pip
 
 about:
-  home: https://gitext.gfz-potsdam.de/EnMAP/sensormapgeo
+  home: https://git.gfz-potsdam.de/EnMAP/sensormapgeo
   summary: A package for transforming remote sensing images between sensor and map geometry.
-  license: GPL-3.0-or-later
+  license: Apache-2.0
   license_file: LICENSE
 
 extra:
