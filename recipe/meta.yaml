@@ -26,7 +26,7 @@ requirements:
     - pebble
     - py-tools-ds >=0.18.0
     - pyproj >=2.2
-    - pyresample >=1.11.0
+    - pyresample >=1.17.0
     - python
 
 test:
