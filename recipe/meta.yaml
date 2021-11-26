@@ -10,7 +10,7 @@ source:
   sha256: a3bfa0a2f47b92be12483ba35615d919e500f7e252394bf5c4d4e16efd9dfc00
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -26,7 +26,7 @@ requirements:
     - pebble
     - py-tools-ds >=0.18.0
     - pyproj >=2.2
-    - pyresample >=1.11.0
+    - pyresample >=1.17.0
     - python
 
 test:
