@@ -1,5 +1,5 @@
 {% set name = "sensormapgeo" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sensormapgeo-{{ version }}.tar.gz
-  sha256: 0644253e3906a12ad0c926ee1ecec79fc925e3e502e9268f91293baa4deff0f8
+  sha256: a3bfa0a2f47b92be12483ba35615d919e500f7e252394bf5c4d4e16efd9dfc00
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -26,7 +26,7 @@ requirements:
     - pebble
     - py-tools-ds >=0.18.0
     - pyproj >=2.2
-    - pyresample >=1.11.0,<1.17.0
+    - pyresample >=1.11.0
     - python
 
 test:
