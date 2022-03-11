@@ -20,7 +20,7 @@ requirements:
     - python
     - setuptools
   run:
-    - fontconfig=2.13.1  # [osx]  # intermediate fix for https://github.com/kb47/pdf-poppler/issues/2#issuecomment-1063521221
+    - fontconfig =2.13.1  # [osx]  # intermediate fix for https://github.com/kb47/pdf-poppler/issues/2#issuecomment-1063521221
     - gdal
     - numpy
     - _openmp_mutex =* =*_llvm  # [linux]
