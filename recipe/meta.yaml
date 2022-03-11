@@ -1,5 +1,5 @@
 {% set name = "sensormapgeo" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sensormapgeo-{{ version }}.tar.gz
-  sha256: 7473f0a9f203cb621193ad164013f86abb012ab4cfdae35857da796264f49a47
+  sha256: 259b2657acb16b996ca46b4fc4755062e9e1b0ab2be12b1bef1b9b3994b164fb
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - python
     - setuptools
   run:
+    - fontconfig =2.13.1  # [osx]  # intermediate fix for https://github.com/kb47/pdf-poppler/issues/2#issuecomment-1063521221
     - gdal
     - numpy
     - _openmp_mutex =* =*_llvm  # [linux]
