@@ -10,8 +10,8 @@ source:
   sha256: 259b2657acb16b996ca46b4fc4755062e9e1b0ab2be12b1bef1b9b3994b164fb
 
 build:
-  number: 2
-  skip: true  # [py<36]
+  number: 3
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,7 +20,6 @@ requirements:
     - python
     - setuptools
   run:
-    - fontconfig >=2.13.1,<2.13.96  # [osx and py==37]  # intermediate fix for https://github.com/kb47/pdf-poppler/issues/2#issuecomment-1063521221
     - gdal
     - numpy
     - _openmp_mutex =* =*_llvm  # [linux]
