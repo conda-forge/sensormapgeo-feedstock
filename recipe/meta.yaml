@@ -1,5 +1,5 @@
 {% set name = "sensormapgeo" %}
-{% set version = "0.7.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sensormapgeo-{{ version }}.tar.gz
-  sha256: f2c8a8929b15c43b5c0b7aca270a09dc6992e7cfa30c56e1f0bae2189297c488
+  sha256: fe30ab24f6a1b9bfea0c18b4d533293014790be930b32d1a017d507b21780a02
 
 build:
-  number: 1
-  skip: true  # [py<37]
+  number: 0
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,10 +23,9 @@ requirements:
     - python
     - setuptools
   run:
-    - gdal
+    - gdal >=3.8
+    - joblib
     - numpy
-    - _openmp_mutex =* =*_llvm  # [linux]
-    - pebble
     - py-tools-ds >=0.18.0
     - pyproj >=2.2
     - pyresample >=1.17.0
@@ -35,6 +34,11 @@ requirements:
 test:
   imports:
     - sensormapgeo
+    - sensormapgeo.Transformer
+    - sensormapgeo.gdal_backend.transformer_2d
+    - sensormapgeo.gdal_backend.transformer_3d
+    - sensormapgeo.pyresample_backend.transformer_2d
+    - sensormapgeo.pyresample_backend.transformer_3d
     - sensormapgeo.transformer_2d
     - sensormapgeo.transformer_3d
   commands:
