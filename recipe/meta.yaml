@@ -34,7 +34,7 @@ requirements:
 test:
   imports:
     - sensormapgeo
-    - sensormapgeo.Transformer
+    - sensormapgeo.transformer
     - sensormapgeo.gdal_backend.transformer_2d
     - sensormapgeo.gdal_backend.transformer_3d
     - sensormapgeo.pyresample_backend.transformer_2d
