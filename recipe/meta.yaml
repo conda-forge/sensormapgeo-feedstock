@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<38]
+  skip: true  # [py<39]  # skip Python 3.8 due to incompatibility with gdal 3.8 and its requirements
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
