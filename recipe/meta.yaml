@@ -1,5 +1,5 @@
 {% set name = "sensormapgeo" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sensormapgeo-{{ version }}.tar.gz
-  sha256: fe30ab24f6a1b9bfea0c18b4d533293014790be930b32d1a017d507b21780a02
+  sha256: 02af87c909f24bd0a78fe0b2a3d25c1b8c935b97b3e3b2e64367b2d1c51a6e2e
 
 build:
   number: 0
-  skip: true  # [py<39]  # skip Python 3.8 due to incompatibility with gdal 3.8 and its requirements
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
