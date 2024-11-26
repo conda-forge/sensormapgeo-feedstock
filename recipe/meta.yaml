@@ -24,6 +24,7 @@ requirements:
     - setuptools
   run:
     - gdal >=3.8
+    - importlib_metadata  # [py<310] # should be shipped by pyresample but isn´t. https://github.com/conda-forge/pyresample-feedstock/issues/101
     - joblib
     - numpy
     - py-tools-ds >=0.18.0
