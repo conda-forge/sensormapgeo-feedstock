@@ -10,7 +10,7 @@ source:
   sha256: 02af87c909f24bd0a78fe0b2a3d25c1b8c935b97b3e3b2e64367b2d1c51a6e2e
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -26,7 +26,7 @@ requirements:
     - gdal >=3.8
     - joblib
     - numpy
-    - py-tools-ds >=0.18.0
+    - py-tools-ds >=0.18.0,<0.24
     - pyproj >=2.2
     - pyresample >=1.17.0
     - python
