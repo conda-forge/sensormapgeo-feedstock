@@ -26,7 +26,7 @@ requirements:
     - gdal >=3.8
     - joblib
     - numpy
-    - py-tools-ds >=0.18.0,<0.24
+    - py-tools-ds >=0.18.0
     - pyproj >=2.2
     - pyresample >=1.17.0
     - python
