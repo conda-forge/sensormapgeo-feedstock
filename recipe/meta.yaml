@@ -1,5 +1,5 @@
 {% set name = "sensormapgeo" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sensormapgeo-{{ version }}.tar.gz
-  sha256: ed5a07e644bdef0faeb8ed53c540954489131cc6e2038a27bb20a1f23b01029b
+  sha256: ecfb8146836e661435cea0187d26237ad8e7e7875d2c9409a6ba266b5f362052
 
 build:
   number: 0
