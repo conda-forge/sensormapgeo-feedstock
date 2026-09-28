@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sensormapgeo
-  version: "1.2.2"
+  version: "1.2.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sensormapgeo-${{ version }}.tar.gz
-  sha256: ecfb8146836e661435cea0187d26237ad8e7e7875d2c9409a6ba266b5f362052
+  sha256: 3a80f7d295e4d23210c2d7f9c2263cb4b74df9a8e9a696431f8d84d253f600b1
 
 build:
-  number: 2
+  number: 0
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv
 
